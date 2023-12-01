@@ -1,5 +1,5 @@
-#ifndef _OLAF_
-#define _OLAF_
+#ifndef _SHELL-TEST.H_
+#define _SHELL-TEST.H_
 
 #include <string.h>
 #include <stdio.h>
