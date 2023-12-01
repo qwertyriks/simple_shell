@@ -1,5 +1,5 @@
-#ifndef _SHELL-TEST.H_
-#define _SHELL-TEST.H_
+#ifndef MISHELL_H
+#define MISHELL_H
 
 #include <string.h>
 #include <stdio.h>
