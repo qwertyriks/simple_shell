@@ -59,11 +59,11 @@ void print_str(char *str, int new_line)
 }
 
 /**
- * _write_char - Writes a character to stdout
+ * _putchar - Writes a character to stdout
  * @c: Character that will be written to stdout
  * Return: Upon success how many characters were written.
  */
-int _write_char(char c)
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }

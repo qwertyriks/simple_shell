@@ -1,6 +1,7 @@
 #ifndef MISHELL_H
 #define MISHELL_H
 
+#define PROMPT "mishell $ "
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,7 +13,6 @@
 #include <sys/stat.h>
 #include <stdarg.h>
 #include <signal.h>
-#define PROMPT "Olaf $ "
 
 
 /**
@@ -49,14 +49,14 @@ void exit_b(char *);
 void env_b(char *);
 void cd_b(char *);
 
-/*Holberton library functions*/
+/*alx library functions*/
 int _strcmp(char *, char *);
 char *_strdup(char *);
 void print_str(char *, int);
 int print_number(int);
-int _write_char(char);
+int _putchar(char);
 
-/* Helper functions*/
+/* utility functions*/
 void error_printing(char *, int, char *);
 void exec_error(char *, int, char *);
 
