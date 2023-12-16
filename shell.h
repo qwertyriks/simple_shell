@@ -124,23 +124,6 @@ char *find_path(info_t *, char *, char *);
 
 /* loophsh.c */
 int loophsh(char **);
-
-/* _strings.c */
-int _strlen(char *);
-int _strcmp(char *, char *);
-char *starts_with(const char *, const char *);
-char *_strcat(char *, char *);
-char *_strcpy(char *, char *);
-char *_strdup(const char *);
-void _puts(char *);
-int _putchar(char);
-
-/* towz.c */
-char **strtow(char *, char *);
-char **strtow2(char *, char);
-int ptr_free(void **);
-
-/*_realloc.c */
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
@@ -150,6 +133,17 @@ int interactive(info_t *);
 int is_delim(char, char *);
 int _isalpha(int);
 int _atoi(char *);
+int _strlen(char *);
+int _strcmp(char *, char *);
+char *starts_with(const char *, const char *);
+char *_strcat(char *, char *);
+char *_strcpy(char *, char *);
+char *_strdup(const char *);
+void _puts(char *);
+int _putchar(char);
+char **strtow(char *, char *);
+char **strtow2(char *, char);
+int ptr_free(void **);
 
 /* _errors1.c */
 int _erratoi(char *);
@@ -158,26 +152,14 @@ int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
 
-/* builtin2.c */
+/* builtins.c */
 int _myexit(info_t *);
 int _mycd(info_t *);
 int _myhelp(info_t *);
-
-/* _builtin2.c */
 int _myhistory(info_t *);
 int _myalias(info_t *);
 
-/*_getline.c */
-ssize_t get_input(info_t *);
-int _getline(info_t *, char **, size_t *);
-void sigintHandler(int);
-
-/* _getinfo.c */
-void clear_info(info_t *);
-void set_info(info_t *, char **);
-void free_info(info_t *, int);
-
-/* _environ.c */
+/* _env.c */
 char *_getenv(info_t *, const char *);
 int _myenv(info_t *);
 int _mysetenv(info_t *);
@@ -210,8 +192,12 @@ int _putsfd(char *str, int fd);
 char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
-
-/* vars_file.c */
+ssize_t get_input(info_t *);
+int _getline(info_t *, char **, size_t *);
+void sigintHandler(int);
+void clear_info(info_t *);
+void set_info(info_t *, char **);
+void free_info(info_t *, int);
 int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
