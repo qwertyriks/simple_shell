@@ -21,7 +21,6 @@ int _strlen(char *r)
  * starts_with - function that checks whether  needle begins with haystack
  * @haystack: string to be searched for
  * @needle: the substring to be sought
- *
  * Return: address of next character of haystack or NULL if otherwise
  */
 char *starts_with(const char *haystack, const char *needle)
@@ -35,7 +34,6 @@ char *starts_with(const char *haystack, const char *needle)
  * _strcat - function that concatenates desti and srce
  * @desti: destination buffer
  * @srce:  source buffer
- *
  * Return: ptr to desti buffer
  */
 char *_strcat(char *desti, char *srce)
@@ -53,7 +51,6 @@ char *_strcat(char *desti, char *srce)
  * _strcmp -  function that compares of two strangs.
  * @str1:  first string
  * @str2:  second string
- *
  * Return: negative if str1 < str2,
  *	positive if str1 > str2,
  *	zero if str1 == str2

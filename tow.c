@@ -97,3 +97,23 @@ char **strtow2(char *str, char d)
 	c[y] = NULL;
 	return (c);
 }
+
+
+/**
+ * ptr_free - function that frees a pointer
+ * and NULLs the address
+ * @ptr: address of the pointer to free
+ * Return: 1 if freed,
+ * otherwise return 0.
+ */
+int ptr_free(void **ptr)
+{
+        if (ptr && *ptr)
+        {
+                free(*ptr);
+                *ptr = NULL;
+                return (1);
+        }
+        return (0);
+}
+

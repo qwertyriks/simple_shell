@@ -1,6 +1,24 @@
 #include "shell.h"
 
 /**
+ * renumber_history - function that renumbers history after changes
+ * @info: Structure that has arguments
+ * Return: the new history count
+ */
+int renumber_history(info_t *info)
+{
+        list_t *node = info->history;
+        int j = 0;
+
+        while (node)
+        {
+                node->num = j++;
+                node = node->next;
+        }
+        return (info->histcount = j);
+}
+
+/**
  * get_history_file -function that  gets the history file
  * @info: is parameter struct
  *
@@ -122,20 +140,3 @@ int build_history_list(info_t *info, char *buff, int linecount1)
 	return (0);
 }
 
-/**
- * renumber_history - function that renumbers history after changes
- * @info: Structure that has arguments
- * Return: the new history count
- */
-int renumber_history(info_t *info)
-{
-	list_t *node = info->history;
-	int j = 0;
-
-	while (node)
-	{
-		node->num = j++;
-		node = node->next;
-	}
-	return (info->histcount = j);
-}
