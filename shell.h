@@ -160,7 +160,7 @@ void *_realloc(void *, unsigned int, unsigned int);
 /* mem.c */
 int bfree(void **);
 
-/* atoi.c */
+/* alx_library*/
 int interactive(info_t *);
 int is_delim(char, char *);
 int _isalpha(int);
